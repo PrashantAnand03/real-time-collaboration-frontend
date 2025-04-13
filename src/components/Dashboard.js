@@ -12,7 +12,8 @@ const Dashboard = () => {
                 const user = JSON.parse(localStorage.getItem('user'));
                 // Extract the token from the parsed object
                 const token = user ? user.token : null;
-                const { data } = await axios.get('http://localhost:5000/api/documents', {
+                // const { data } = await axios.get('http://localhost:5000/api/documents', { // local host
+                    const { data } = await axios.get(`${process.env.REACT_APP_API_URL}/api/documents`, {
                     headers: {
                         Authorization: `Bearer ${token}`,
                     },

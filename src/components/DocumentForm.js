@@ -13,7 +13,9 @@ const DocumentForm = () => {
             const user = JSON.parse(localStorage.getItem('user'));
                 // Extract the token from the parsed object
                 const token = user ? user.token : null;
-            const { data } = await axios.post('http://localhost:5000/api/documents', { title, content }, {
+            // const { data } = await axios.post('http://localhost:5000/api/documents', { title, content }, { // local host
+                const { data } = await axios.post(`${process.env.REACT_APP_API_URL}/api/documents`, // Dynamically set backend URL
+                { title, content }, {
                 headers: {
                     Authorization: `Bearer ${token}`,
                 },
