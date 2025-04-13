@@ -1,0 +1,29 @@
+.footer-link {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .footer-link:hover {
+    color: #007bff !important; /* Changes to blue on hover */
+  }
+
+  
+  .nav-item .nav-link {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 4px; /* Rounded corners like a badge */
+    background-color: #000 !important; /* Dark background like a button */
+    color: white !important;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+}
+
+.nav-item .nav-link:hover {
+    background-color: #F8F8FF !important; /* Light ghost white color */
+    color: #007bff !important; /* Change text color to black */
+    transform: scale(1.05); /* Slight zoom effect */
+    cursor: pointer;
+}

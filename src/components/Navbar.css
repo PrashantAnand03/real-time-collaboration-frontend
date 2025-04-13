@@ -1,0 +1,273 @@
+.navbar-custom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.navbar-center {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1; 
+}
+.navbar-brand{
+    color: #fff;
+}
+.navbar-brand:hover{
+    color: #007bff;
+}
+
+.navbar-link {
+    color: white !important;
+    transition: color 0.3s ease;
+}
+
+.navbar-link:hover {
+    color: #007bff !important;
+}
+
+.nav-hov:hover {
+    color: #007bff !important; 
+}
+
+
+.navbar-toggler {
+    background-color:grey;
+}
+
+.navbar-toggler-icon {
+    background-color: grey; 
+}
+
+
+
+
+.Login-button:hover, .Register-button:hover {
+    background-color: #007f5e; 
+    color: #fff;
+}
+.Register-button:hover {
+ background-color: #007bff;
+}
+
+@media (min-width: 769px) {
+    .navbar-center .navbar-links {
+        justify-content: center;  
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-center .navbar-links {
+        justify-content: flex-start;  
+    }
+}
+
+.navbar-right {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;  
+}
+
+
+.navbar-brand {
+    margin-left: 15px;
+}
+
+.Login-button {
+    color: #fff;
+    font-size: 14px;
+    padding: 8px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: 0.3s background-color;
+}
+/* #007bff */
+.Register-button {
+    color: #fff;
+    font-size: 14px;
+    padding: 8px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: 0.3s background-color;
+}
+
+@media (max-width: 768px) {
+    .navbar-center {
+        display: block;
+        text-align: center;
+    }
+
+    .navbar-right {
+        display: block;
+        text-align: center;
+        margin-top: 10px;
+    }
+    .navbar-center .navbar-link {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .navbar-right .Login-button, .navbar-right .Register-button {
+        width: auto; 
+        margin-top: 10px; 
+        padding: 6px 15px; 
+        font-size: 12px; 
+    }
+
+    .Login-button:hover {
+        background-color: #007f5e;
+        color: #fff;
+    }
+
+    .Register-button:hover {
+        background-color: #007bff;
+    }
+}
+
+
+/* Change hover color for dropdown items of Hero Avtar Menue */
+.dropdown-menu .dropdown-item:hover {
+    background-color: #ff4500 !important; /* Change this color to your desired hover color */
+    color: white !important;
+}
+
+
+/* Default styles for large screens remain unchanged */
+.navbar-links .nav-hov {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 6px;
+    background-color: #27408B !important;
+    color: white !important;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+}
+
+.navbar-links .nav-hov:hover {
+    background-color: #F8F8FF !important;
+    color: #007bff !important;
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+/* Ensure dropdown hover effect works across all screen sizes */
+.dropdown-menu .dropdown-item:hover,
+.dropdown-menu .dropdown-item:focus {
+    background-color: #ff4500 !important; /* Red hover effect */
+    color: white !important;
+}
+
+/* Responsive styles for Mobile, Tablets, and iPads */
+@media (max-width: 768px) {
+    .navbar-collapse {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 10px;
+    }
+
+    /* Move user profile (hero) inside hamburger menu at the top */
+    .user-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 15px;
+        padding-top: 10px;
+    }
+
+    .user-avatar {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        overflow: hidden;
+        background-color: #f0f0f0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .user-avatar img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* Ensure dropdown menu works inside hamburger menu */
+    .dropdown-menu {
+        width: 100%;
+        text-align: center;
+        background-color: #343a40;
+        border: none;
+        display: block !important;
+    }
+
+    .dropdown-item {
+        padding: 12px;
+        color: white;
+        font-weight: 500;
+        transition: background-color 0.3s ease-in-out;
+    }
+
+    /* Fix: Ensure Red Hover Effect on Dropdown Items for Small Screens */
+    .dropdown-menu .dropdown-item:hover,
+    .dropdown-menu .dropdown-item:focus {
+        background-color: #ff4500 !important; /* Red hover effect */
+        color: white !important;
+    }
+
+    /* Center navbar toggle button and navigation links */
+    .navbar-toggler {
+        order: 1;
+        margin: auto;
+    }
+
+    .navbar-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        width: 100%;
+        padding: 15px 0;
+    }
+
+    .navbar-links .nav-hov {
+        display: block;
+        width: auto;
+        padding: 8px 15px;
+        font-size: 14px;
+        font-weight: 600;
+        border-radius: 6px;
+        text-align: center;
+    }
+
+    .navbar-links .nav-hov:hover {
+        background-color: #F8F8FF !important;
+        color: #007bff !important;
+        transform: scale(1.05);
+    }
+
+    /* Adjust dropdown position in mobile menu */
+    .dropdown-menu {
+        margin-top: 10px !important;
+    }
+}
+
+
+/* Responsive styles for Mobile, Tablets, and iPads */
+@media (max-width: 768px) {
+    .navbar {
+        position:relative;
+        padding: -5px -5px -5px -5px;
+    }
+
+    /* Move Hamburger Button to Extreme Right */
+    .navbar-toggler {
+        position: absolute;
+        right: 15px;
+        top: 8px;
+        border: none;
+    }
+}
