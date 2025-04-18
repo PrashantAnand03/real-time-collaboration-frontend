@@ -278,10 +278,8 @@ import { getDocumentById, updateDocument, deleteDocument } from '../services/doc
 import { io } from 'socket.io-client';
 import axios from 'axios';
 
-const API_URL = process.env.REACT_APP_API_URL;
-
 const DocumentDetails = () => {
-    const socket = io(`${API_URL}`);
+    const socket = io(`${process.env.REACT_APP_API_URL}`);
     const { id } = useParams();
     const navigate = useNavigate();
     const [document, setDocument] = useState(null);
@@ -305,7 +303,7 @@ const DocumentDetails = () => {
                 try {
                     const token = localStorage.getItem('token');
                     const response = await axios.post(
-                        `${API_URL}/api/documents`, // Fixed URL concatenation
+                        `${process.env.REACT_APP_API_URL}/api/documents`, // Fixed URL concatenation
                         { title: 'Untitled', content: '' },
                         {
                             headers: {
