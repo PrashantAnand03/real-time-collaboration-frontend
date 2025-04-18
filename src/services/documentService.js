@@ -59,7 +59,8 @@ export const getDocumentById = async (id) => {
 // Update a document by ID
 export const updateDocument = async (id, documentData) => {
     // const { data } = await axios.put(`${API_URL}/${id}`, documentData, {
-        const { data } = await axios.put(`${API_URL}/documents/${id}`, documentData, {
+        // const { data } = await axios.put(`${API_URL}/documents/${id}`, documentData, {
+            const { data } = await axios.put(`${API_URL}/api/documents/${id}`, documentData, {
         headers: {
             Authorization: `Bearer ${token}`,
         },
@@ -70,7 +71,8 @@ export const updateDocument = async (id, documentData) => {
 // Delete a document by ID
 export const deleteDocument = async (id) => {
     // const { data } = await axios.delete(`${API_URL}/${id}`, {
-        const { data } = await axios.delete(`${API_URL}/api/documents/${id}`, {
+        // const { data } = await axios.delete(`${API_URL}/api/documents/${id}`, {
+            const { data } = await axios.delete(`${API_URL}/api/documents/${id}`, {
         headers: {
             Authorization: `Bearer ${token}`,
         },
