@@ -58,7 +58,8 @@ export const getDocumentById = async (id) => {
 
 // Update a document by ID
 export const updateDocument = async (id, documentData) => {
-    const { data } = await axios.put(`${API_URL}/${id}`, documentData, {
+    // const { data } = await axios.put(`${API_URL}/${id}`, documentData, {
+        const { data } = await axios.put(`${API_URL}/api/documents/${id}`, documentData, {
         headers: {
             Authorization: `Bearer ${token}`,
         },
