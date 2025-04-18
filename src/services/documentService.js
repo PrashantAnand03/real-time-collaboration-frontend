@@ -15,8 +15,18 @@ export const getDocuments = async () => {
     return data;
 };
 
+// export const getDocumentById = async (id) => {
+//     const { data } = await axios.get(`${API_URL}/${id}`, {
+//         headers: {
+//             Authorization: `Bearer ${token}`,
+//         },
+//     });
+//     return data;
+// };
+
+// Get a document by ID
 export const getDocumentById = async (id) => {
-    const { data } = await axios.get(`${API_URL}/${id}`, {
+    const { data } = await axios.get(`${API_URL}/api/documents/${id}`, {
         headers: {
             Authorization: `Bearer ${token}`,
         },
