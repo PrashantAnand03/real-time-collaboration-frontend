@@ -275,11 +275,12 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate, useLocation } from 'react-router-dom';
 import { getDocumentById, updateDocument, deleteDocument } from '../services/documentService';
-import { io } from 'socket.io-client';
+// import { io } from 'socket.io-client';
 import axios from 'axios';
+import socket from './socket'; // shared socket instance
 
 const DocumentDetails = () => {
-    const socket = io(`${process.env.REACT_APP_API_URL}`);
+    // const socket = io(`${process.env.REACT_APP_API_URL}`);
     const { id } = useParams();
     const navigate = useNavigate();
     const [document, setDocument] = useState(null);
@@ -327,6 +328,7 @@ const DocumentDetails = () => {
     };
 
     useEffect(() => {
+        socket.connect();
         fetchDocument();
 
         // Join the document room when the document is fetched
