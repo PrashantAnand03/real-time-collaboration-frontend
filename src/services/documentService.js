@@ -26,12 +26,19 @@ export const getDocuments = async () => {
 
 // Get a document by ID
 export const getDocumentById = async (id) => {
+    try {
     const { data } = await axios.get(`${API_URL}/api/documents/${id}`, {
         headers: {
             Authorization: `Bearer ${token}`,
         },
     });
     return data;
+   } catch (error) {
+    if (error.response && error.response.status === 404) {
+        throw new Error('Document not found');
+    }
+    throw new Error('Failed to fetch document');
+}
 };
 
 
