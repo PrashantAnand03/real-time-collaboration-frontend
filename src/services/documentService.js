@@ -70,7 +70,7 @@ export const updateDocument = async (id, documentData) => {
 // Delete a document by ID
 export const deleteDocument = async (id) => {
     // const { data } = await axios.delete(`${API_URL}/${id}`, {
-        const { data } = await axios.delete(`${API_URL}/api/documents/${id}`, {
+        const { data } = await axios.delete(`${API_URL}/documents/${id}`, {
         headers: {
             Authorization: `Bearer ${token}`,
         },
